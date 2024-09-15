@@ -31,6 +31,11 @@ public class Main {
 				}
 				else {
 					System.out.printf("게시글이 %d개 있습니다.\n", lastArticleId);
+					System.out.println("번호\t/ 제목");
+					for(int i = articles.size() - 1; i >= 0; i--) {
+						Article article = articles.get(i);
+						System.out.printf(" %d\t/ %s\n", article.id, article.title);
+					}
 				}
 			}
 			else if(command.equals("article write")) {
